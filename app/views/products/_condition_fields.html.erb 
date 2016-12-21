@@ -1,0 +1,4 @@
+<div class="field">
+ 
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</div>

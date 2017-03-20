@@ -1,0 +1,36 @@
+<div>
+<ul>
+<% if model_signed_in? %>
+  Logged in as <strong><%= current_model.email %></strong>.
+  <li><%= link_to 'Edit profile', edit_model_registration_path, :class => 'navbar-link' %> </li>|
+  <li><%= link_to 'Logout', destroy_model_session_path, method: :delete, :class => 'navbar-link'  %></li>
+<% else %>
+  <li><%= link_to 'Sign up', new_model_registration_path, :class => 'navbar-link'  %> |</li>
+  <li><%= link_to 'Login', new_model_session_path, :class => 'navbar-link'  %></li>
+<% end %></ul></div>
+
+
+<div class="row">
+  <div class="col-md-9">
+    <ul id="conversations-list">
+      <% @conversations.each do |conversation| %>
+        <%= render 'conversations/conversation', conversation: conversation, model: current_model %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">User list</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @models.each do |model| %>
+            <li><%= link_to model.email, conversations_path(model_id: model), remote: true, method: :post %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar-link{
+	background-color:#2D5180;
+    float:right;
+    border-radius:40px;
+}
+.abc{
+	background-image: url('divider2.jpg')
+}
+.form {
+  background: #215257;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  color:#F0E608;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: #000;
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+   background: #4e2929;;
+  color: white;
+}
+.tab-group .active a {
+  background: #000;
+  color: #F0E608;
+}
+
+.tab-content > div:last-child {
+  display: none;
+}
+.abc1{
+  background-image: url('divider1.jpg')
+}

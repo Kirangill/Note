@@ -1,0 +1,45 @@
+<body class="abc1">
+
+<p id="notice"><%= notice %></p>
+<div>
+<ul>
+<% if model_signed_in? %>
+  Logged in as <strong><%= current_model.email %></strong>.
+  <li><%= link_to 'Edit profile', edit_model_registration_path, :class => 'navbar-link' %> </li>|
+  <li><%= link_to 'Logout', destroy_model_session_path, method: :delete, :class => 'navbar-link'  %></li>
+<% else %>
+  <li><%= link_to 'Sign up', new_model_registration_path, :class => 'navbar-link'  %> |</li>
+  <li><%= link_to 'Login', new_model_session_path, :class => 'navbar-link'  %></li>
+<% end %></ul></div>
+<div style="text-align:center;">
+<h1 style="color:#C00615;">Listing Factories</h1>
+<br>
+
+<table style="margin-left:35%;" border="2px;" cellspacing="1px">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th colspan="3">Generate</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @factories.each do |factory| %>
+      <tr>
+        <td style="text-align:center;color:#D176D8;"><%= factory.name %></td>
+        <td style="text-align:center;color:#D176D8;"><%= factory.location %></td>
+        <td><%= link_to 'Show', factory %></td>
+        <td><%= link_to 'Edit', edit_factory_path(factory) %></td>
+        <td><%= link_to 'Destroy', factory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Factory', new_factory_path %>
+<br>
+
+<%= link_to 'New Product', new_product_path %>

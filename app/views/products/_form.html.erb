@@ -1,0 +1,34 @@
+<%= form_for(@product) do |f| %>
+  
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :name %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :name %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :subdomain %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :subdomain %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :content %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :content %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-9 small-offset-3 columns">
+    <%= f.submit %>
+  </div>
+</div>
+
+
+<% end %>

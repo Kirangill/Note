@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170117054852) do
 
   create_table "application_records", force: :cascade do |t|
@@ -32,10 +33,17 @@ ActiveRecord::Schema.define(version: 20170117054852) do
     t.string   "name",       limit: 255
     t.string   "location",   limit: 255
     t.integer  "model_id",   limit: 4
+=======
+ActiveRecord::Schema.define(version: 20161220093251) do
+
+  create_table "notes", force: :cascade do |t|
+    t.string   "name",       limit: 255
+>>>>>>> b465acf78cf81e0fd56d2dcf73347ec3ba39c22b
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
+<<<<<<< HEAD
   add_index "factories", ["model_id"], name: "index_factories_on_model_id", using: :btree
 
   create_table "messages", force: :cascade do |t|
@@ -87,4 +95,14 @@ ActiveRecord::Schema.define(version: 20170117054852) do
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "models"
   add_foreign_key "products", "factories"
+=======
+  create_table "products", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.decimal  "price",                  precision: 10
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.string   "note",       limit: 255
+  end
+
+>>>>>>> b465acf78cf81e0fd56d2dcf73347ec3ba39c22b
 end

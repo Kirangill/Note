@@ -2,6 +2,7 @@
 
 one:
   name: MyString
+<<<<<<< HEAD
   subdomain: MyString
   content: MyString
   factory_id: 
@@ -11,3 +12,10 @@ two:
   subdomain: MyString
   content: MyString
   factory_id: 
+=======
+  price: 9.99
+
+two:
+  name: MyString
+  price: 9.99
+>>>>>>> b465acf78cf81e0fd56d2dcf73347ec3ba39c22b

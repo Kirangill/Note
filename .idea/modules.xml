@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/openchat.iml" filepath="$PROJECT_DIR$/.idea/openchat.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/store.iml" filepath="$PROJECT_DIR$/.idea/store.iml" />
+>>>>>>> b465acf78cf81e0fd56d2dcf73347ec3ba39c22b
     </modules>
   </component>
 </project>

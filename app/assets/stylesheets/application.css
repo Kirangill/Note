@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+<<<<<<< HEAD
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -43,3 +44,8 @@ ul {
   padding: 10px;
   float: left;
 }
+=======
+ *= require foundation_and_overrides
+
+ */
+>>>>>>> b465acf78cf81e0fd56d2dcf73347ec3ba39c22b
